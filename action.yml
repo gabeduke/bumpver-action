@@ -7,8 +7,13 @@ inputs:
   GITHUB_TOKEN:
     description: 'GitHub token to push new tag'
     required: true
+  DRY_RUN:
+    description: 'Run the action in dry-run mode'
+    required: false
+    default: 'false'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.GITHUB_TOKEN }}
+    - ${{ inputs.DRY_RUN }}
