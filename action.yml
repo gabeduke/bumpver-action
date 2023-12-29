@@ -1,5 +1,5 @@
 name: 'Bumpver Tag'
-description: 'Increments semver repository tag based on commit message (#major, #minor, #patch). The action defaults to #patch if no keyword is found.'
+description: 'Increments semver repository tag based on commit message (#major, #minor, defaults to #patch)'
 inputs:
   GITHUB_TOKEN:
     description: 'GitHub token'
