@@ -16,7 +16,7 @@ steps:
     uses: actions/checkout@v4
 
   - name: Bump version
-    uses: gabeduke/bumpver-action@v1
+    uses: gabeduke/bumpver-action@v1.0.14
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
