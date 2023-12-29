@@ -82,7 +82,7 @@ func (a *App) GetLatestTag(ctx context.Context) (*TagVersion, error) {
 
 	// If no tags are found, return a default TagVersion of v0.0.0
     if len(allTags) == 0 {
-        defaultVersion, _ := semver.NewVersion("0.0.0")
+        defaultVersion, _ := semver.NewVersion("v0.0.0")
         return &TagVersion{SemVer: defaultVersion}, nil
     }
 
