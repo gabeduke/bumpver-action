@@ -1,5 +1,5 @@
-name: 'Bump Version'
-description: 'Bump version based on commit message'
+name: 'Bumpver Tag'
+description: 'Automatically increments the semantic versioning tag of a GitHub repository based on the commit message. If the commit message contains `#major`, `#minor`, or `#patch`, the action will increment the associated part of the semver. Requires a GitHub token to authenticate and perform the operation.'
 inputs:
   GITHUB_TOKEN:
     description: 'GitHub token'
