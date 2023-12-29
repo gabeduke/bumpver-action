@@ -34,7 +34,8 @@ func IncrementVersion(tag *semver.Version, bumpType string) (string, error) {
 		return "", fmt.Errorf("invalid bump type: %s", bumpType)
 	}
 
-	return newTag.String(), nil
+	// TODO make the leading "v" configurable
+	return "v" + newTag.String(), nil
 }
 
 func New(cfg *Config) *App {
