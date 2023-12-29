@@ -1,8 +1,11 @@
 name: 'Bumpver Tag'
 description: 'Increments semver repository tag based on commit message (#major, #minor, defaults to #patch)'
+branding:
+  icon: 'tag'
+  color: 'green'
 inputs:
   GITHUB_TOKEN:
-    description: 'GitHub token'
+    description: 'GitHub token to push new tag'
     required: true
 runs:
   using: 'docker'
