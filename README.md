@@ -13,10 +13,10 @@ This GitHub Action bumps the version based on commit messages. If a commit messa
 ```yaml
 steps:
   - name: Checkout code
-    uses: actions/checkout@v2
+    uses: actions/checkout@v4
 
   - name: Bump version
-    uses: gabeduke/bumpver-action@v1
-    with:
+    uses: gabeduke/bumpver-action@v1.0.12
+    env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
