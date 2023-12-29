@@ -17,4 +17,4 @@ runs:
   env:
     GITHUB_TOKEN: ${{ inputs.GITHUB_TOKEN }}
   args:
-    - ${{ inputs.DRY_RUN }}
+    - "--dry-run=${{ inputs.DRY_RUN }}"
