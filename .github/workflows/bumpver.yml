@@ -1,0 +1,25 @@
+name: Bump Version
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  bump_version:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v4
+
+    - name: Set up Go
+      uses: actions/setup-go@v5
+      with:
+        go-version: 1.21
+
+    - name: Bumpver
+      run: go run main.go -dry-run=false
+      env:
+        # The user token must be used so that other github actons can be triggered
+        GITHUB_TOKEN: ${{ secrets.USER_GITHUB_TOKEN }}
