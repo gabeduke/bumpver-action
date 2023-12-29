@@ -1,0 +1,11 @@
+name: 'Bump Version'
+description: 'Bump version based on commit message'
+inputs:
+  GITHUB_TOKEN:
+    description: 'GitHub token'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.GITHUB_TOKEN }}
